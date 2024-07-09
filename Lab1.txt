@@ -1,0 +1,11 @@
+Las APIs son un método de acceso y actualización de bases de datos que nos permite interactuar con los datos desde cualquier entorno, como el front-end, utilizando diferentes métodos predefinidos. Con estos estándares, podemos realizar consultas y modificaciones mediante llamadas HTTP.
+
+Dentro de los métodos principales encontramos el PUT y PATCH, ambos utilizados para modificar datos. Las principales diferencias entre PUT y PATCH son que PATCH permite modificar solo el valor de una clave específica, mientras que PUT requiere que se envíe una representación completa del registro, reemplazando todos sus elementos.
+
+Para borrar datos mediante una API, debemos utilizar el método DELETE siempre que esté disponible el endpoint correspondiente.
+
+También encontramos el método POST, que nos permite crear un nuevo registro en la base de datos.
+
+Cada uno de estos métodos tiene diferentes formas de recibir las respuestas (datos) y de enviar los parámetros. Para definir esto, además de otras variables, debemos especificar algunos parámetros en el encabezado (header) de la petición. Por ejemplo, para definir el formato de los datos, debemos declarar en el encabezado si se trata de JSON, XML, GraphQL, etc. Podrían existir parámetros específicos de cada API que debemos consultar en la documentación.
+
+Por último, es importante saber que los datos de un formulario HTML se pueden enviar mediante los métodos GET y POST. Por seguridad, el método más seguro y utilizado es el POST, ya que los datos no forman parte de la URL de la solicitud. Esto significa que los datos no quedan completamente expuestos y se reduce el riesgo de que sean capturados por terceros.
